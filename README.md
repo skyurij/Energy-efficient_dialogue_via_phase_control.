@@ -37,6 +37,49 @@ Normal — baseline dialogue mode, without energy optimization or phase stabiliz
 
 These conventions allow consistent interpretation of all Δφ–E–dE–d²E trajectories, <br>  standing-wave patterns, and phase portraits presented in the repository.
 
+
+Running the Dialogue Analysis Scripts
+
+This repository contains two complementary scripts for collecting dialogue-phase data and generating the logs used for all figures.
+
+1. energy_phase_dialog_v2.py — Energy-Saving Mode (ER-only)
+This script runs a dialogue entirely in Energy-Reduction (ER) mode, where the assistant attempts to minimize phase mismatch (Δφ) and energy (E) at every step.
+
+Usage:
+python energy_phase_dialog_v2.py
+
+The script will:
+Ask for the baseline energy level E0 (default: 0.043).
+Start an iterative dialogue.
+For each user message, compute Δφ, E, dΔφ, d²Δφ, dE, d²E.
+Adaptively update the minimal observed energy E0_min.
+Save a CSV log at the end of the session:
+energy_phase_log_YYYYMMDD_HHMMSS.csv
+
+Use this log with reproduce_plots.ipynb to generate all plots in the figures/ folder.
+
+2. energy_phase_dialog_v3_with_ER_switch.py — Switchable ER/NORMAL Modes
+This script allows dynamic switching between NORMAL and Energy-Reduction (ER) mode during dialogue.
+
+Usage:
+python energy_phase_dialog_v3_with_ER_switch.py
+
+At startup, the script will ask:
+Enable energy-saving mode by default? (yes/no)
+During the dialogue, you can switch modes at any time by typing:
+CNR=YES   → switch to ER mode
+CNR=NO    → switch to NORMAL mode
+
+The script:
+Tracks segments — continuous intervals in the same mode.
+Saves both:
+a step-by-step log:
+energy_phase_log_steps_YYYYMMDD_HHMMSS.csv
+a segment summary log:
+energy_phase_log_segments_YYYYMMDD_HHMMSS.csv
+
+These logs show how the system behaves in each mode, and they reproduce all phase portraits and turbulence diagrams in figures/.
+
 ```
 phase-phase-control/
 │
