@@ -38,12 +38,14 @@ Normal — baseline dialogue mode, without energy optimization or phase stabiliz
 These conventions allow consistent interpretation of all Δφ–E–dE–d²E trajectories, <br>  standing-wave patterns, and phase portraits presented in the repository.
 
 
+
 Running the Dialogue Analysis Scripts
 
 This repository contains two complementary scripts for collecting dialogue-phase data and generating the logs used for all figures.
 
 1. energy_phase_dialog_v2.py — Energy-Saving Mode (ER-only)
 This script runs a dialogue entirely in Energy-Reduction (ER) mode, where the assistant attempts to minimize phase mismatch (Δφ) and energy (E) at every step.
+
 
 Usage:
 python energy_phase_dialog_v2.py
@@ -58,8 +60,10 @@ energy_phase_log_YYYYMMDD_HHMMSS.csv
 
 Use this log with reproduce_plots.ipynb to generate all plots in the figures/ folder.
 
+
 2. energy_phase_dialog_v3_with_ER_switch.py — Switchable ER/NORMAL Modes
 This script allows dynamic switching between NORMAL and Energy-Reduction (ER) mode during dialogue.
+
 
 Usage:
 python energy_phase_dialog_v3_with_ER_switch.py
