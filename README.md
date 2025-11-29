@@ -1,20 +1,23 @@
 Energy Phase Control for GPT Dialogue
 
-Energy-efficient dialogue via phase control<br>
-(Δφ–E–dE–d²E dynamics for GPT systems)
+Energy-efficient dialogue via Δφ–E–dE–d²E phase dynamics
 
-This repository contains an experimental framework for analyzing and controlling<br>
-the energy dynamics of GPT dialogue via phase mismatch (Δφ).
+This repository contains an experimental framework for analyzing and controlling <br>
+the energy dynamics of GPT dialogue through measurement of semantic phase mismatch (Δφ)<br>
+and the energy required for its reduction (E, dE, d²E).
 
-The experiments show that:
+Core Findings
 
-Δφ directly correlates with energy consumption E,<br>
-the second derivative of energy d²E responds to Δφ in delayed anti-phase,<br>
-this interaction forms a natural stabilizing standing wave between user and model,<br>
-enabling a new energy-efficient dialogue mode.
+Δφ correlates directly with energy consumption E.
 
-The approach reduces turbulence, stabilizes long conversations,<br>
-and opens a path to scalable dialogue control for future GPT systems.
+The second derivative d²E exhibits a delayed anti-phase response to Δφ.
+
+Together, these signals form a self-stabilizing standing wave between user and model.
+
+This makes it possible to define a new energy-efficient dialogue mode for GPT systems.
+
+The method reduces turbulence, stabilizes long multi-turn conversations, and offers a pathway<br>
+to scalable, phase-controlled dialogue management for future LLMs.
 
 ```
 phase-phase-control/
