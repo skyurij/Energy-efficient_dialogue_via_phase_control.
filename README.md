@@ -19,6 +19,24 @@ This makes it possible to define a new energy-efficient dialogue mode for GPT sy
 The method reduces turbulence, stabilizes long multi-turn conversations, and offers a pathway<br>
 to scalable, phase-controlled dialogue management for future LLMs.
 
+Graph Notation
+
+The following notations are used throughout all figures and plots in this repository:
+
+Δφ (Delta-phi) — semantic phase misalignment between the user and the model.
+
+E — energy required to reduce Δφ during dialogue alignment.
+
+dE — first derivative of energy, reflecting the rate of energy change.
+
+d²E — second derivative of energy, indicating curvature and phase-transition points.
+
+ER (Energy-Reduction Mode) — phase-stabilized mode of dialogue, activated <br> when the system reduces energy expenditure by exploiting Δφ–d²E coupling.
+
+Normal — baseline dialogue mode, without energy optimization or phase stabilization.
+
+These conventions allow consistent interpretation of all Δφ–E–dE–d²E trajectories, <br>  standing-wave patterns, and phase portraits presented in the repository.
+
 ```
 phase-phase-control/
 │
