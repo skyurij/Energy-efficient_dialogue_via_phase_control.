@@ -84,6 +84,10 @@ energy_phase_log_segments_YYYYMMDD_HHMMSS.csv
 
 These logs show how the system behaves in each mode, and they reproduce all phase portraits and turbulence diagrams in figures/.
 
+## License
+This project is released under the MIT License.  
+See the [LICENSE](./LICENSE) file for details.
+
 ```
 phase-phase-control/
 │
